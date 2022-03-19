@@ -1,0 +1,42 @@
+
+<header id="navHome">
+    <mat-toolbar id="nav-wrapper">
+        <mat-toolbar-row id="main-nav" >
+            <div class="container py-2">
+                <div class="row">
+                    <div class="col-4 col-md-2">
+                        <a class="brand-logo" href="/"><img src="../assets/images/IMG_main.JPG"></a>
+                    </div>
+                    <div class="col-10 d-flex align-items-center justify-content-end d-none d-md-flex">
+                        <ul class="mb-0 ps-0">
+                            <li><a (click)="move('projects')">Pojects</a></li>
+                            <li><a (click)="move('about')">About</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-8 col-md-10 d-flex align-items-center justify-content-end d-md-none">
+                        <ul class="mobile-menu mb-0 ps-0">
+
+                          <!-- @TODO Show Cart if Checkout in Process —
+                            This should work as a dialog and load the contents of the cart
+                            <li class="shop"><a href="#"><mat-icon>shopping_cart</mat-icon></a></li>
+                          -->
+
+                            <li class="account"><a href="https://myaccount.telmax.com/login" target="_blank"><mat-icon>person</mat-icon></a></li>
+                            <li><mat-icon [matMenuTriggerFor]="mobileMenu">menu</mat-icon>
+                                <mat-menu class="mobileMenu" #mobileMenu="matMenu" xPosition="after" yPosition="below">
+                                  <a mat-menu-item href="/services/internet">Internet</a>
+                                  <a mat-menu-item href="/services/tv">TV</a>
+                                  <a mat-menu-item href="/services/phone">Phone</a>
+                                  <button mat-menu-item [routerLink]="['/about']">About Us</button>
+                                  <button mat-menu-item [routerLink]="['/why-telmax']">Why telMAX?</button>
+                                  <a mat-menu-item href="https://ca.indeed.com/cmp/Telmax-Inc./jobs">Careers</a>
+                               </mat-menu>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </mat-toolbar-row>
+    </mat-toolbar>
+</header>

@@ -1,0 +1,70 @@
+
+#navHome {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+#nav-wrapper {
+    box-shadow: 0px 2px 30px -2px rgba(138, 174, 210, .3);
+    #secondary-nav {
+        background-color: var(--color-primary);
+        height: auto;
+        padding: .9rem;
+        a {
+            color: #FFF;
+            line-height: 1rem;
+            &:first-child {
+                margin-right: 4rem;
+                text-decoration: none;
+            }
+            text-decoration: underline;
+        }
+    }
+    #main-nav {
+        background-color: #FFF;
+        height: auto;
+        min-height: 90px;
+        .brand-logo {
+          padding: 10px 0;
+            img {
+              width: 80%;
+                @media only screen and (max-width: 600px) {
+                    max-width: 100px;
+                }
+            }
+        }
+        ul {
+            li {
+                display: inline-block;
+                padding-right: 2rem;
+                cursor: pointer;
+                &:last-child {
+                    padding-right: 0px;
+                }
+                a, button {
+                    color: var(--color-primary);
+                    text-decoration: none;
+                    font-size: 18px;
+                    font-weight: 600;
+                    background-color: initial;
+                    border: none;
+                }
+            }
+            &.mobile-menu {
+                li {
+                    &.shop, &.account {
+                        mat-icon {
+                            background-color: #385cad;
+                            color: #fff;
+                            border-radius: 50%;
+                            padding: 5px;
+                            width: auto;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
